@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: #f4f5f7;
+}
+
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-size: 14px;
+    background: white;
+}
+
+.navbar-top{
+    justify-content: center;
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    color: darkgreen;
+    font-weight: 550;
+    gap: 20px;
+    background-color: #f4fff7;
+}
+
+
+.red-text{
+    color: #c8196f;
+}
+
+.navbar-middle{
+    justify-content: space-between;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    color: gray
+}
+
+.horizontal-list {
+  display: flex;       /* Aligns list items in a row */
+  gap: 20px;           /* Easily adds space between the items */
+  list-style: none;    /* Removes default bullet points */
+  padding: 0;          /* Removes default browser indentation */
+  margin: 0;
+  text-decoration: none;
+}
+
+.horizontal-list a{
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+}
+.search-bar{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border: 1px solid azure;
+    border-radius: 40px;
+    margin: 0  30px;
+    gap:50px;
+    background: white;
+    padding: 5px 25px;
+}
+.search-bar form{
+    flex: 1;
+}
+
+.search-bar input {
+    width: 100%;   /* fill the form */
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.button-dark-green{
+    border-radius: 50px;
+    background-color: #2b7a4b;
+    padding: 10px 16px;
+    color: white;
+    border: 1px solid white;
+    font-size: 15px;
+}
+
+.navbar-bottom{
+    background-color: #2b7a4b;
+    justify-content: space-between;
+    padding: 11px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.white-outline{
+    border-radius: 20px;
+    padding: 8px 10px;
+    background-color: #2b7a4b;
+    color: white;
+    border: 1px solid white;
+}
+
+.navbar-bottom img{
+    height: auto;
+    width: auto;
+    max-width: 24px;
+}
+
+.horizontal-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bare{
+    color: #122c47;
+    font-size: 24px;
+    padding: 20px 15px;
+}
+
+.hero{
+    padding:10px 15px
+}
+
+.gallery {
+  display: grid;
+  /* Defines a rigid 4-column layout */
+  grid-template-columns: repeat(4, 1fr);
+  /* Explicitly defines 2 rows of equal height */
+  grid-template-rows: repeat(2, 1fr); 
+  gap: 16px;
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 500px; /* Optional: Sets a fixed height for the entire grid container */
+}
+
+/* The oversized card styling */
+.large-card {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.large-card{
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;}
+
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-grow: 1; /* Ensures image fills the vertical space of the card */
+}
+
+.card-content {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  background: #fff;
+}
+
+/* Responsive adjustment for mobile screens where grids collapse */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+  }
+  .large-card {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .card img {
+    height: 250px;
+  }
+}
