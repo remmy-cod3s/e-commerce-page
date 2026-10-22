@@ -317,29 +317,97 @@ body{
 
 .med-gallery ol{
     list-style-type: none;
-    justify-content: space-evenly;
 }
 
 .med-gallery{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); 
     gap: 16px;
     padding: 10px;
     max-width: none;
-    margin: 0 ;
-    height: 500px;
+    margin: 0 ;/
 }
 .gallery-items{
-    padding: 30px;
+    padding: 5px;
     display: flex;
-    
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    list-style: none;
     justify-content: space-between;
     flex: 1;
 }
-.med-gallery ol img{
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  flex-grow: 1; /* Ensures image fills the vertical space of the card */
+
+
+.med-title{
+    padding-top: 35px;
+    color: #122c47;   
+    text-align: left;
+    font-size: 25px; 
 }
+
+.med-see{
+    text-decoration: none;
+    color: #2b7a4b;
+    text-align: right;
+}
+
+.med-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.item {
+    flex: 0 0 calc((100% - 60px) / 5);
+    scroll-snap-align: start;
+    border: 1px solid #ededed;
+    padding:  20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+}
+.item img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ededed;
+    border-radius: 10px;
+}
+
+.image-content{
+    height: 200px;
+}
+
+
+.green-text{
+    color: #2b7a4b;
+    font-size: 16px;
+    padding: 14px 0;
+}
+
+.blue-heading{
+    color: #122c47;
+    padding-bottom: 15px;
+    font-size: 18px;
+}
+
+.description{
+    color: #727272;
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+.price{
+    color: #122c47;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: 1000;   
+}
+
+.cart{
+    text-decoration: none;
+    border-radius: 30px;
+    border: 1px solid #2b7a4b;
+    color: #2b7a4b;
+    padding: 8px 20px;
+}
+
